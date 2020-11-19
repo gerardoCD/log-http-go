@@ -31,17 +31,17 @@ func Reponse(statusCode int , json string){
 
 	if (statusCode == 200){
 		color.Green("-------------------- Reponse Service ---------------------\n")
-		color.Green(" Status:  %s ", statusCode)
+		color.Green(" Status:  %d ", statusCode)
 		color.Green(" Reponse:  %s ", json)
 		color.Green("----------------------------------------------------------\n")
 	} else if ( statusCode >= 201 && statusCode <= 299 ) {
 		color.Magenta("-------------------- Reponse Service ---------------------\n")
-		color.Magenta(" Status:  %s ", statusCode)
+		color.Magenta(" Status:  %d ", statusCode)
 		color.Magenta(" Reponse:  %s ", json)
 		color.Magenta("----------------------------------------------------------\n")
 	} else {
 		color.Magenta("-------------------- Reponse Service ---------------------\n")
-		color.Magenta(" Status:  %s ", statusCode)
+		color.Magenta(" Status:  %d ", statusCode)
 		color.Magenta(" Reponse:  %s ", json)
 		color.Magenta("----------------------------------------------------------\n")
 	}
@@ -58,21 +58,21 @@ func ReponseService(statusCode int ,json string,  url string, name string){
 		color.Green("-------------------- Reponse Service ---------------------\n")
 		color.Green(" Name Service:  %s ", name)
 		color.Green(" Url:  %s ", url)
-		color.Green(" Status:  %s ", statusCode)
+		color.Green(" Status:  %d ", statusCode)
 		color.Green(" Reponse:  %s ", json)
 		color.Green("----------------------------------------------------------\n")
 	} else if ( statusCode >= 201 && statusCode <= 299 ) {
 		color.Magenta("-------------------- Reponse Service ---------------------\n")
 		color.Magenta(" Name Service:  %s ", name)
 		color.Magenta(" Url:  %s ", url)
-		color.Magenta(" Status:  %s ", statusCode)
+		color.Magenta(" Status:  %d ", statusCode)
 		color.Magenta(" Reponse:  %s ", json)
 		color.Magenta("----------------------------------------------------------\n")
 	} else {
 		color.Magenta("-------------------- Reponse Service ---------------------\n")
 		color.Magenta(" Name Service:  %s ", name)
 		color.Magenta(" Url:  %s ", url)
-		color.Magenta(" Status:  %s ", statusCode)
+		color.Magenta(" Status:  %d ", statusCode)
 		color.Magenta(" Reponse:  %s ", json)
 		color.Magenta("----------------------------------------------------------\n")
 	}
