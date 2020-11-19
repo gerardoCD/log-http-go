@@ -12,17 +12,17 @@ func TestFuntion() string {
 
 
 func Begin(name string){
-	color.Blue("-------------------- Begin Service  %s ---------------------", name)
+	color.Blue("-------------------- Begin Service  %s --------------------- \n", name)
 }
 
 func end(){
-	color.Blue("-------------------- End Service ---------------------")
+	color.Blue("-------------------- End Service ---------------------\n")
 }
 
 func Request(json string){
-	color.Blue("-------------------- Request Service ---------------------")
-	color.Blue(" Request:  %s ", json)
-	color.Blue("----------------------------------------------------------")
+	color.Blue("-------------------- Request Service ---------------------\n")
+	color.Blue(" Request:  %s \n", json)
+	color.Blue("----------------------------------------------------------\n")
 }
 
 
@@ -30,23 +30,20 @@ func Reponse(statusCode int , json string){
 
 
 	if (statusCode == 200){
-		color.Green("-------------------- Reponse Service ---------------------")
+		color.Green("-------------------- Reponse Service ---------------------\n")
 		color.Green(" Status:  %s ", statusCode)
 		color.Green(" Reponse:  %s ", json)
-		color.Green("-------------------- %s ---------------------", json)
-		color.Green("----------------------------------------------------------")
+		color.Green("----------------------------------------------------------\n")
 	} else if ( statusCode >= 201 && statusCode <= 299 ) {
-		color.Magenta("-------------------- Reponse Service ---------------------")
+		color.Magenta("-------------------- Reponse Service ---------------------\n")
 		color.Magenta(" Status:  %s ", statusCode)
 		color.Magenta(" Reponse:  %s ", json)
-		color.Magenta("-------------------- %s ---------------------", json)
-		color.Magenta("----------------------------------------------------------")
+		color.Magenta("----------------------------------------------------------\n")
 	} else {
-		color.Magenta("-------------------- Reponse Service ---------------------")
+		color.Magenta("-------------------- Reponse Service ---------------------\n")
 		color.Magenta(" Status:  %s ", statusCode)
 		color.Magenta(" Reponse:  %s ", json)
-		color.Magenta("-------------------- %s ---------------------", json)
-		color.Magenta("----------------------------------------------------------")
+		color.Magenta("----------------------------------------------------------\n")
 	}
 
 	end()
@@ -58,29 +55,26 @@ func Reponse(statusCode int , json string){
 func ReponseService(statusCode int ,json string,  url string, name string){
 
 	if (statusCode == 200){
-		color.Green("-------------------- Reponse Service ---------------------")
+		color.Green("-------------------- Reponse Service ---------------------\n")
 		color.Green(" Name Service:  %s ", name)
 		color.Green(" Url:  %s ", url)
 		color.Green(" Status:  %s ", statusCode)
 		color.Green(" Reponse:  %s ", json)
-		color.Green("-------------------- %s ---------------------", json)
-		color.Green("----------------------------------------------------------")
+		color.Green("----------------------------------------------------------\n")
 	} else if ( statusCode >= 201 && statusCode <= 299 ) {
-		color.Magenta("-------------------- Reponse Service ---------------------")
+		color.Magenta("-------------------- Reponse Service ---------------------\n")
 		color.Magenta(" Name Service:  %s ", name)
 		color.Magenta(" Url:  %s ", url)
 		color.Magenta(" Status:  %s ", statusCode)
 		color.Magenta(" Reponse:  %s ", json)
-		color.Magenta("-------------------- %s ---------------------", json)
-		color.Magenta("----------------------------------------------------------")
+		color.Magenta("----------------------------------------------------------\n")
 	} else {
-		color.Magenta("-------------------- Reponse Service ---------------------")
+		color.Magenta("-------------------- Reponse Service ---------------------\n")
 		color.Magenta(" Name Service:  %s ", name)
 		color.Magenta(" Url:  %s ", url)
 		color.Magenta(" Status:  %s ", statusCode)
 		color.Magenta(" Reponse:  %s ", json)
-		color.Magenta("-------------------- %s ---------------------", json)
-		color.Magenta("----------------------------------------------------------")
+		color.Magenta("----------------------------------------------------------\n")
 	}
 
 }
