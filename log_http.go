@@ -1,4 +1,4 @@
-package log_http
+package lgs
 
 import (
 	"github.com/fatih/color"
