@@ -16,6 +16,7 @@ func main() {
 	lgs.Reponse(200,"{\"hola\":4}")
 
 
+
 	mapD := map[string]interface{}{"apple": 5, "lettuce": "Hola"}
 	mapB, _ := json.Marshal(mapD)
 	lgs.Reponse(200,string(mapB))

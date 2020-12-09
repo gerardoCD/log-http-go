@@ -54,7 +54,7 @@ func Reponse(statusCode int , object interface{}){
 
 }
 
-func Info (info string){
+func Info(info string){
 	color.Blue(" --------------------  %s  --------------------\n\n", info)
 }
 
