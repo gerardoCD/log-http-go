@@ -12,7 +12,7 @@ func main() {
 
 	lgs.Begin("Hola")
 	lgs.Request("{\"hola\":4}")
-	lgs.ReponseService(201,"{\"hola\":4}", "http://app/getElement", "Get Element")
+	lgs.ReponseService(200,"{\"hola\":4}", "http://app/getElement", "Get Element")
 	lgs.Reponse(200,"{\"hola\":4}")
 
 

@@ -28,6 +28,8 @@ import (
   - Mark end service
   - Reponse Services
   - Reponde middleware service 
+  - Log Info 
+  - Log Error
   
  # Examples!
 
@@ -39,6 +41,8 @@ func main() {
 	lgs.Request("{\"hola\":4}")
 	lgs.ReponseService(201,"{\"hola\":4}", "http://app/getElement", "Get Element")
 	lgs.Reponse(200,"{\"hola\":4}")
+	lgs.Info("Log random")
+	lgs.Error("Error Fatal")
 }
   
 ```
