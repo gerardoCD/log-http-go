@@ -22,7 +22,7 @@ func End(){
 
 func Request(object interface{}){
 
-	json,_ := json.Marshal(object)
+	json,_ := json.MarshalIndent(object, "", "\t")
 
 	color.Blue("-------------------- Request Service ---------------------\n\n")
 	color.Blue(" Request:  %s \n\n", string(json))
@@ -32,7 +32,7 @@ func Request(object interface{}){
 
 func Reponse(statusCode int , object interface{}){
 
-	json,_ := json.Marshal(object)
+	json,_ := json.MarshalIndent(object, "", "\t")
 	if (statusCode == 200){
 		color.Green("-------------------- Reponse Service ---------------------\n\n")
 		color.Green(" Status:  %d \n\n", statusCode)
