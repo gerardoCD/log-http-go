@@ -63,7 +63,7 @@ func Error(err string){
 }
 
 func RequestService(object interface{},  url string, name string){
-	json,_ := json.Marshal(object)
+	json,_ := json.MarshalIndent(object, "", "\t")
 		color.Green("-------------------- Request Service ---------------------\n\n")
 		color.Green(" Name Service:  %s \n\n", name)
 		color.Green(" Url:  %s \n\n", url)
@@ -85,7 +85,7 @@ func RequestServiceString(json string,  url string, name string){
 
 
 func ReponseService(statusCode int ,object interface{},  url string, name string){
-	json,_ := json.Marshal(object)
+	json,_ := json.MarshalIndent(object, "", "\t")
 	if (statusCode == 200){
 		color.Green("-------------------- Reponse Service ---------------------\n\n")
 		color.Green(" Name Service:  %s \n\n", name)
