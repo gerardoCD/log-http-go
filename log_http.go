@@ -62,6 +62,27 @@ func Error(err string){
 	color.Magenta(" --------------------  %s  --------------------\n\n", err)
 }
 
+func RequestService(object interface{},  url string, name string){
+	json,_ := json.Marshal(object)
+		color.Green("-------------------- Request Service ---------------------\n\n")
+		color.Green(" Name Service:  %s \n\n", name)
+		color.Green(" Url:  %s \n\n", url)
+		color.Green(" Request:  %s \n\n", string(json))
+		color.Green("----------------------------------------------------------\n\n\n\n")
+
+}
+
+
+
+func RequestServiceString(json string,  url string, name string){
+		color.Green("-------------------- Request Service ---------------------\n\n")
+		color.Green(" Name Service:  %s \n\n", name)
+		color.Green(" Url:  %s \n\n", url)
+		color.Green(" Request:  %s \n\n", json)
+		color.Green("----------------------------------------------------------\n\n\n\n")
+
+}
+
 
 func ReponseService(statusCode int ,object interface{},  url string, name string){
 	json,_ := json.Marshal(object)
@@ -91,12 +112,30 @@ func ReponseService(statusCode int ,object interface{},  url string, name string
 }
 
 
-func RequestService(object interface{},  url string, name string){
-	json,_ := json.Marshal(object)
-		color.Green("-------------------- Request Service ---------------------\n\n")
+func ReponseServiceString(statusCode int ,json string,  url string, name string){
+	if (statusCode == 200){
+		color.Green("-------------------- Reponse Service ---------------------\n\n")
 		color.Green(" Name Service:  %s \n\n", name)
 		color.Green(" Url:  %s \n\n", url)
-		color.Green(" Request:  %s \n\n", string(json))
+		color.Green(" Status:  %d \n\n", statusCode)
+		color.Green(" Reponse:  %s \n\n", json)
 		color.Green("----------------------------------------------------------\n\n\n\n")
+	} else if ( statusCode >= 201 && statusCode <= 299 ) {
+		color.Magenta("-------------------- Reponse Service ---------------------\n\n")
+		color.Magenta(" Name Service:  %s \n\n", name)
+		color.Magenta(" Url:  %s \n\n", url)
+		color.Magenta(" Status:  %d \n\n", statusCode)
+		color.Magenta(" Reponse:  %s \n\n", json)
+		color.Magenta("----------------------------------------------------------\n\n\n\n")
+	} else {
+		color.Magenta("-------------------- Reponse Service ---------------------\n\n")
+		color.Magenta(" Name Service:  %s \n\n", name)
+		color.Magenta(" Url:  %s \n\n", url)
+		color.Magenta(" Status:  %d \n\n", statusCode)
+		color.Magenta(" Reponse:  %s \n\n", json)
+		color.Magenta("----------------------------------------------------------\n\n\n\n")
+	}
 
 }
+
+
