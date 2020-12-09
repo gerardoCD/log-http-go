@@ -89,3 +89,14 @@ func ReponseService(statusCode int ,object interface{},  url string, name string
 	}
 
 }
+
+
+func RequestService(object interface{},  url string, name string){
+	json,_ := json.Marshal(object)
+		color.Green("-------------------- Request Service ---------------------\n\n")
+		color.Green(" Name Service:  %s \n\n", name)
+		color.Green(" Url:  %s \n\n", url)
+		color.Green(" Request:  %s \n\n", string(json))
+		color.Green("----------------------------------------------------------\n\n\n\n")
+
+}
